@@ -60,6 +60,8 @@ private struct APIClient {
         print("URL", url)
         request.setValue(apiKey, forHTTPHeaderField: "Authorization")
         
+        print(request)
+        
         let (data, response) = try await URLSession.shared.data(for: request)
         
         // Validate HTTP response
